@@ -1,0 +1,68 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="jquery-mockimages.js"></script>
+</head>
+<body>
+Choose mock images by:
+<form>
+Provider:
+<select id="provider" name="provider" onchange="$('.mockimage').mockimages({provider: $('#provider').val()})">
+	<option value="lorempixel">lorempixel</option>
+	<option value="placehold">placehold</option>
+	<option value="placesheen">placesheen</option>
+	<option value="placeskull">placeskull</option>
+	<option value="pipsum">pipsum</option>
+	<option value="placeape">placeape</option>
+	<option value="placekitten">placekitten</option>
+	<option value="placebear">placebear</option>
+	<option value="fillmurray">fillmurray</option>
+	<option value="placecage">placecage</option>
+	<option value="nicenicejpg">nicenicejpg</option>
+	<option value="dummyimage">dummyimage</option>
+</select>
+<br>Type:
+<select id="type" name="type" onchange="$('.mockimage').mockimages({type: $('#type').val()})">
+	<option value="misc">misc</option>
+	<option value="animals">animals</option>
+	<option value="celeb">celeb</option>
+	<option value="technology">technology</option>
+	<option value="block">block</option>
+	<option value="all">all</option>
+	<option value="random">random</option>
+</select>
+</form>
+<script type="text/javascript">
+for(i=0; i<10; i++) {
+	var height= i<=4 ? 100: 150 ;
+	var width=Math.floor(Math.random()*230)+70;
+	document.write('<img src="" class="mockimage" width="' + width + '" height="' +height +'">');
+	if(i==4) {
+		document.write("<br>");
+	}
+}
+</script>
+<table>
+	<tr>
+		<td><img src="" height="300" width="150" class="mockimage" border="0"></td>
+		<td><img src="" height="300" width="150" class="mockimage" border="0"></td>
+		<td><img src="" height="300" width="150" class="mockimage" border="0"></td>
+		<td>
+			<img src="" height="150" width="75" class="mockimage">
+			<img src="" height="150" width="75" class="mockimage">
+			<br>
+			<img src="" height="150" width="150" class="mockimage">
+	        </td>
+	</tr>
+	<tr>
+		<td colspan="4">
+		<img src="" height="300" width="600" class="mockimage"></td>	
+		</td>
+	</tr>
+</table>
+<script>
+$('.mockimage').mockimages({ default_height: 250, default_width: 250, type: 'all' });
+</script>
+</body>
+</html>
+
