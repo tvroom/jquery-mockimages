@@ -13,29 +13,29 @@ Currently a demo page is viewable at: http://timvroom.com/mockimages.html
 Sample usage:
 
 
-<html>
-	<head>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-		<script type="text/javascript" src="jquery-mockimages.js"></script>
-	</head>
-	<body>
-		<img src="" height="300" width="150" class="mockimage" border="0"></td>
-		<img src="" height="300" width="150" class="mockimage" border="0"></td>
-		<img src="" height="300" width="150" class="mockimage" border="0"></td>
-		<script type="text/javascript">
-			// simple default
-			$('.mockimage').mockimages();
+	<html>
+		<head>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+			<script type="text/javascript" src="jquery-mockimages.js"></script>
+		</head>
+		<body>
+			<img src="" height="300" width="150" class="mockimage" border="0"></td>
+			<img src="" height="300" width="150" class="mockimage" border="0"></td>
+			<img src="" height="300" width="150" class="mockimage" border="0"></td>
+			<script type="text/javascript">
+				// simple default
+				$('.mockimage').mockimages();
+				
+				// override default width & height if width and height not specified in image tags
+				//$('.mockimage').mockimages({ default_height: 250; default_width:250});
+				
+				// specify chosen providers
+				//$('.mockimage').mockimages({ provider: 'placeape'});
 			
-			// override default width & height if width and height not specified in image tags
-			//$('.mockimage').mockimages({ default_height: 250; default_width:250});
+				// specify type of images wanted 
+				//$('.mockimage').mockimages({ type: 'celeb'});
 			
-			// specify chosen providers
-			//$('.mockimage').mockimages({ provider: 'placeape'});
-			
-			// specify type of images wanted 
-			//$('.mockimage').mockimages({ type: 'celeb'});
-			
-		</script>
-<	/body>
-</html>
+			</script>
+	</body>
+	</html>
 
